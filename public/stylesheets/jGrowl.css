@@ -1,0 +1,44 @@
+#growlAreaWrapper {
+  position: fixed;
+  width: 301px;
+  right: 30px;
+  bottom: 30px; }
+
+.growlArea {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 300px;
+  min-height: 70px;
+  padding: 8px;
+  margin-bottom: 15px;
+  color: white;
+  -webkit-box-shadow: 3px 3px 5px 0px #777777;
+  -moz-box-shadow: 3px 3px 5px 0px #777777;
+  box-shadow: 3px 3px 5px 0px #777777;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s ease;
+  -moz-transition: opacity 0.5s ease;
+  -o-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease; }
+  .growlArea .growlIcon {
+    width: 100px; }
+    .growlArea .growlIcon img {
+      width: 64px;
+      height: 64px; }
+  .growlArea .growlBody {
+    width: 200px;
+    height: 100%; }
+    .growlArea .growlBody h1, .growlArea .growlBody p {
+      text-align: left;
+      color: white; }
+    .growlArea .growlBody h1 {
+      text-indent: 0;
+      font-size: 20px;
+      margin-bottom: 12px; }
+    .growlArea .growlBody p {
+      font-size: 12px; }

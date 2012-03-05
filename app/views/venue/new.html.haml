@@ -1,0 +1,38 @@
+#venueFormWrapper
+  #overlayCloseBtn :{
+  - form_tag '/venue/create', :id => "createVenueForm" do
+    = hidden_field_tag 'venue_ll', @ll
+    %p
+      = label_tag 'venue_name', 'Name', :class => "form_required"
+      %br
+      = text_field_tag 'venue_name', "",:placeholder => 'Habana Outpost'
+    %p
+      = label_tag 'venue_address', 'Address'
+      %br
+      = text_field_tag 'venue_address', "",:placeholder => '1313 Mockingbird Lane'
+    %p
+      = label_tag 'venue_cross_street', 'Cross Street'
+      %br
+      = text_field_tag 'venue_cross_street', "",:placeholder => 'at Fulton St'
+    %p
+      = label_tag 'venue_city', 'City'
+      %br
+      = text_field_tag 'venue_city', "",:placeholder => 'New York'
+    %p
+      = label_tag 'venue_state', 'State'
+      %br
+      = text_field_tag 'venue_state', "",:placeholder => 'new York'
+    %p
+      = label_tag 'venue_zpi', 'Zip'
+      %br
+      = text_field_tag 'venue_zip', "",:placeholder => 'AE1234'
+    %p
+      = label_tag 'venue_phone', 'Phone'
+      %br
+      = text_field_tag 'venue_phone', "",:placeholder => '00 01 23 1234'
+    = submit_tag 'Add'
+
+:javascript
+  $("#overlayCloseBtn").bind('click', function() {
+      $("#overlayWrapper").remove()
+  })

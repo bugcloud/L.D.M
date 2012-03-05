@@ -1,0 +1,11 @@
+%header#banner.body
+  %h1
+    = link_to "Veny", root_path
+  %nav
+    %ul
+      %li{:class => (request.path_info =~ /^#{root_path}$/ or request.path_info =~ /\/top\/index/ )? 'active' : 'inactive'}
+        = link_to "Home", root_path, :id => "navLinkHome"
+      %li{:class => (request.path_info =~ /^#{venues_path}$/ or request.path_info =~ /mentions\/.+/)? 'active' : 'inactive'}
+        = link_to "Venues", venues_path, :id => "navLinkVenues"
+      %li= link_to "About", "#contentInfo", :id => "navLinkVenues"
+      %li= link_to "Logout", logout_url, :id => "navLinkVenues"

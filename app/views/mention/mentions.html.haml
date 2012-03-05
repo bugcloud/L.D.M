@@ -1,0 +1,16 @@
+#mentionForm
+  = form_for @mention, :url => create_mention_path(:venue_id  => @mention.venue_id) do |f|
+    = f.text_area :text, :placeholder => "Let's write something...", :cols => 40, :rows => 10
+    = f.hidden_field :venue_id
+    = f.submit "Submit"
+
+#mentionsArea
+  - @mentions.each do |m|
+    %div.mention
+      %div.mention_user
+        = image_tag facebook_image(m.user.facebook_id), :size => '50x50'
+        %p= m.user.username
+      %div.mention_text
+        = hbr m.text
+      %div.mention_delete
+        = link_to "delete", delete_mention_path(:id => m.id.to_s), :confirm => 'Are you sure?', :method => :delete

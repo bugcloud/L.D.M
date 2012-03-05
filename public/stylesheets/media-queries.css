@@ -1,0 +1,31 @@
+@media screen and (max-width: 650px) {
+  html {
+    -webkit-text-size-adjust: none; }
+
+  .body {
+    width: 480px; }
+
+  #banner nav {
+    width: 440px; }
+    #banner nav ul {
+      width: 440px; }
+
+  #content, #contentInfo {
+    width: 480px; } }
+@media screen and (max-width: 480px) {
+  html {
+    -webkit-text-size-adjust: none; }
+
+  body {
+    width: 480px; }
+
+  .body {
+    width: 340px; }
+
+  #banner nav {
+    width: 300px; }
+    #banner nav ul {
+      width: 300px; }
+
+  #content, #contentInfo {
+    width: 340px; } }

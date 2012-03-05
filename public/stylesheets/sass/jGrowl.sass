@@ -1,0 +1,47 @@
+@import common
+
+$growl_width : 300px
+$growl_min_height : 70px
+$growl_icon_width : 100px
+$growl_icon_size : 64px
+
+#growlAreaWrapper
+  position: fixed
+  width: $growl_width + 1px
+  right: 30px
+  bottom: 30px
+
+.growlArea
+  background-color: rgba(0, 0, 0, 0.6)
+  width: $growl_width
+  min-height: $growl_min_height
+  padding: 8px
+  margin-bottom: 15px
+  color: #fff
+  @include boxshadow()
+  @include border-radius(5px)
+  @include box()
+  opacity: 0
+  @include transition(opacity, 0.5s, ease)
+
+  .growlIcon
+    width: $growl_icon_width
+
+    img
+      width: $growl_icon_size
+      height: $growl_icon_size
+
+  .growlBody
+    width: $growl_width - $growl_icon_width
+    height: 100%
+
+    h1,p
+      text-align: left
+      color: #fff
+
+    h1
+      text-indent: 0
+      font-size: 20px
+      margin-bottom: 12px
+    p
+      font-size: 12px

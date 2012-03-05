@@ -1,0 +1,30 @@
+== Welcome to L.D.M
+
+L.D.M is a sample application of using foursquare API.
+
+== Getting Started
+
+1. Clone from github:
+  git clone git://github.com/bugcloud/L.D.M.git
+  cd veny
+  bundle install
+
+2. Register your app to foursquare and get your application's access token:
+  See https://foursquare.com/oauth
+
+3. Make config file for foursquare in "config/foursquare.yml" like this:
+  oauth:
+    access_token: "YOUR ACCESS TOKEN"
+
+4. Make config file for facebook in "config/facebook.yml" like this:
+  development:
+    app_id: "YOUR ID"
+    secret_key: "YOUR KEY"
+  test:
+    app_id: "YOUR ID"
+    secret_key: "YOUR KEY"
+  production:
+    app_id: "YOUR ID"
+    secret_key: "YOUR KEY"
+
+5. That's all. enjoy( ◕ ω ◕ )

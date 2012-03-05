@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:content => "width=device-width, initial-scale=0.8, maximum-scale=1", :name => "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "Veny"
+    = stylesheet_link_tag %w(application style jGrowl media-queries)
+    = javascript_include_tag :defaults
+    = csrf_meta_tag
+    = yield(:head)
+  %body
+    %header#banner.body
+      %h1
+        = link_to "Veny", root_path
+    %section#content.body
+      - flash.each do |name, msg|
+        = content_tag :div, msg, :id => "flash_#{name}"
+      = yield 
+    =render 'layouts/footer'

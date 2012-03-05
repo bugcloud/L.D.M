@@ -1,0 +1,15 @@
+- content_for :head do
+  = javascript_include_tag 'venues'
+
+= link_to "[+] Add new spot", "#addNewSpot", :id => "addNewSpot"
+%br
+%br
+-unless @venues.nil?
+  - @venues["response"]["groups"].each do |group|
+    - group["items"].each do |item|
+      %p
+        = link_to item["name"], mentions_path(:venue_id => item["id"])
+-else
+  %p There is no spot.
+
+= hidden_field_tag 'll', @ll, :id => "currentLL"
